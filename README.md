@@ -1,28 +1,30 @@
+⚠️ **Alert**: We have added additional documentation and datasets in the PDF (system imbalance forecast, other energy market forecasts...). However, we **strongly recommend** that you search and use your own publicly available datasets of Belgian energy prices, electrical loads, etc., to build more robust solutions.
+
 <p align="center">
   <img src="docs/NOX_logo.png" alt="NOX Energy Logo" height="200">
 </p>
 
-# Google Cloud Platform (GCP) recources by GDG
+# Google Cloud Platform (GCP) resources by GDG
 
 You’ll get free Google Cloud access during the event—no credit card needed.
 
 ## How to redeem:
 
-- Make sure you’re signed into a Gmail/Google account.
+* Make sure you’re signed into a Gmail/Google account.
 
-- Open our event’s unique link: https://trygcp.dev/claim/gdg-other-ai-accelerate-hack
+* Open our event’s unique link: [https://trygcp.dev/claim/gdg-other-ai-accelerate-hack](https://trygcp.dev/claim/gdg-other-ai-accelerate-hack)
 
-- Follow the prompts to activate your account and access the Google Cloud Console.
+* Follow the prompts to activate your account and access the Google Cloud Console.
 
 ## Generating Gemini API Keys
 
-After completing the steps to access the Google Cloud Console, you can generate your Gemini API Keys for free. You can find the keys be going to Google AI Studio (https://aistudio.google.com/api-keys) with the same google account used in the steps above.
-<img width="1905" height="493" alt="image" src="https://github.com/user-attachments/assets/4ec3a2d3-54cd-4858-979c-2b89fd2e0c17" />
+After completing the steps to access the Google Cloud Console, you can generate your Gemini API Keys for free. You can find the keys be going to Google AI Studio ([https://aistudio.google.com/api-keys](https://aistudio.google.com/api-keys)) with the same google account used in the steps above. <img width="1905" height="493" alt="image" src="https://github.com/user-attachments/assets/4ec3a2d3-54cd-4858-979c-2b89fd2e0c17" />
 
 ## What is GCP?
+
 Google Cloud Platform offers all the tools of the google cloud development environment to build your applications. It also offers free Gemini API Keys so you can leverage the full potential of generative AI during today's hacking!
 
-These are some of the services the GCP offers ranging from backend & storage to scheduling and ML workloads. Some of them might be interesting to leverage during this case, especially the services enablign AI services! 
+These are some of the services the GCP offers ranging from backend & storage to scheduling and ML workloads. Some of them might be interesting to leverage during this case, especially the services enablign AI services!
 
 * **Vertex AI** : Train/host custom models, embeddings, batch prediction, Model Garden.
 * **Vision API** : Labels, OCR, object detection.
@@ -31,7 +33,6 @@ These are some of the services the GCP offers ranging from backend & storage to 
 * **Vertex AI Workbench** : Managed notebooks; GPUs/TPUs if available.
 
 GCP offers a broad range of other services to allow for cloud deployment of applications. Feel free to check out the possibilities of GCP for your hacking today or future projects!
-
 
 # NOX Energy Hackathon ⚡
 
@@ -48,31 +49,37 @@ This hackathon challenges you to work with **real Belgian energy market data** t
 You have access to three datasets containing Belgian energy market information:
 
 ### 1. Day-Ahead Market (DAM) Prices
+
 **File**: [`data/dam_prices.csv`](data/dam_prices.csv)
 
 Contains electricity prices traded one day in advance:
-- **Frequency**: 15-minute intervals
-- **Period**: 2024-2025
-- **Unit**: EUR/MWh
-- **Columns**: `datetime_utc`, `date`, `hour`, `minute`, `price_eur_mwh`
+
+* **Frequency**: 15-minute intervals
+* **Period**: 2024-2025
+* **Unit**: EUR/MWh
+* **Columns**: `datetime_utc`, `date`, `hour`, `minute`, `price_eur_mwh`
 
 ### 2. Imbalance Price Forecasts
+
 **File**: [`data/imbalance_forecast.csv`](data/imbalance_forecast.csv)
 
 Forecasted prices for grid balancing:
-- **Frequency**: 1-minute intervals
-- **Period**: May 2024 - 2025
-- **Unit**: EUR/MWh
-- **Columns**: `datetime_utc`, `date`, `hour`, `minute`, `second`, `price_eur_mwh`
+
+* **Frequency**: 1-minute intervals
+* **Period**: May 2024 - 2025
+* **Unit**: EUR/MWh
+* **Columns**: `datetime_utc`, `date`, `hour`, `minute`, `second`, `price_eur_mwh`
 
 ### 3. Actual Imbalance Prices
+
 **File**: [`data/imbalance_actual.csv`](data/imbalance_actual.csv)
 
 Real imbalance prices from the grid:
-- **Frequency**: 15-minute intervals
-- **Period**: July 2024 to 2025
-- **Unit**: EUR/MWh
-- **Columns**: `datetime_utc`, `date`, `hour`, `minute`, `price_eur_mwh`
+
+* **Frequency**: 15-minute intervals
+* **Period**: July 2024 to 2025
+* **Unit**: EUR/MWh
+* **Columns**: `datetime_utc`, `date`, `hour`, `minute`, `price_eur_mwh`
 
 ⚠️ **Important**: All timestamps are in **UTC**
 
@@ -81,15 +88,17 @@ Real imbalance prices from the grid:
 ### 1. Read the Guidelines
 
 **Start here**: Open [`docs/NOX_Energy_tech_guidelines.pdf`](docs/NOX_Energy_tech_guidelines.pdf) for:
-- Complete challenge description
-- Technical requirements
-- Evaluation criteria
-- Submission guidelines
-- API access information (if needed)
+
+* Complete challenge description
+* Technical requirements
+* Evaluation criteria
+* Submission guidelines
+* API access information (if needed)
 
 ### 2. Explore the Data
 
 Quick exploration script:
+
 ```bash
 # View first few rows
 head -20 data/dam_prices.csv
@@ -131,19 +140,22 @@ nox-energy-hackathon/
 ### Understanding the Data
 
 **Day-Ahead Market (DAM)**
-- Electricity prices set for the next day
-- Traders buy/sell energy 24 hours in advance
-- More stable and predictable
+
+* Electricity prices set for the next day
+* Traders buy/sell energy 24 hours in advance
+* More stable and predictable
 
 **Imbalance Prices**
-- Real-time grid balancing costs
-- Occur when actual consumption ≠ planned consumption
-- More volatile than DAM prices
+
+* Real-time grid balancing costs
+* Occur when actual consumption ≠ planned consumption
+* More volatile than DAM prices
 
 **Negative Prices**
-- Yes, electricity prices can be negative!
-- Happens during excess renewable generation
-- Producers pay consumers to use electricity
+
+* Yes, electricity prices can be negative!
+* Happens during excess renewable generation
+* Producers pay consumers to use electricity
 
 ### Working with the Data
 
@@ -163,8 +175,9 @@ print(f"Max price: {dam['price_eur_mwh'].max():.2f} EUR/MWh")
 ### API Access (Optional but recommended)
 
 You can also query live data from:
-- **ENTSOE Transparency Platform**: [Day-Ahead Market Prices](https://newtransparency.entsoe.eu/)
-- **Elia Open Data**: [Imbalance Prices](https://opendata.elia.be/)
+
+* **ENTSOE Transparency Platform**: [Day-Ahead Market Prices](https://newtransparency.entsoe.eu/)
+* **Elia Open Data**: [Imbalance Prices](https://opendata.elia.be/)
 
 See the technical guidelines PDF for API details.
 
@@ -177,28 +190,32 @@ As described in the technical guideline, you will need to send in a total of 4 p
 Your solution must produce a **CSV file with predictions** in the following format:
 
 **Columns:**
-- `datetime_utc` - Timestamp in UTC (e.g., `2024-01-01 00:00:00`)
-- `price_eur_mwh` - Predicted price in EUR/MWh (numeric)
+
+* `datetime_utc` - Timestamp in UTC (e.g., `2024-01-01 00:00:00`)
+* `price_eur_mwh` - Predicted price in EUR/MWh (numeric)
 
 **Example output file:**
 
 What to submit by email at 18:29:
+
 ```csv
 datetime_utc,price_eur_mwh
 2025-10-29 18:30:00,45.50
 ```
 
 ⚠️ **Important**:
-- Use **UTC timezone** for all timestamps
-- Match the time interval specified in the guidelines
-- Ensure no missing values
-- Sort by datetime ascending
+
+* Use **UTC timezone** for all timestamps
+* Match the time interval specified in the guidelines
+* Ensure no missing values
+* Sort by datetime ascending
 
 ### Submission Requirements
 
 **Detailed submission instructions are in the technical guidelines PDF.**
 
 General checklist to provide at:
+
 1. ✅ Follow the deadline specified in guidelines for the submissions of the predictions by email
 2. ✅ At 19:30, provide the source code and solution documentation
 3. ✅ Include any required visualizations or reports
@@ -212,21 +229,9 @@ General checklist to provide at:
 ## 🔗 Useful Resources
 
 ### Energy Market Information
-- [ENTSOE Transparency Platform](https://newtransparency.entsoe.eu/)
-- [Elia Open Data Portal](https://opendata.elia.be/)
-- [Open-Meteo Weather API](https://open-meteo.com/en/docs) (for renewable correlation)
+
+* [ENTSOE Transparency Platform](https://newtransparency.entsoe.eu/)
+* [Elia Open Data Portal](https://opendata.elia.be/)
+* [Open-Meteo Weather API](https://open-meteo.com/en/docs) (for renewable correlation)
 
 ---
-
-## About NOX Energy
-
-NOX Energy is pioneering smart energy management solutions, combining AI, IoT, and energy expertise to optimize energy consumption, reduce costs, and accelerate the renewable energy transition.
-
-
-
-
-**Good luck!** ⚡
-
----
-
-*For complete challenge details, evaluation criteria, and requirements, please refer to the technical guidelines PDF in the docs folder.*
