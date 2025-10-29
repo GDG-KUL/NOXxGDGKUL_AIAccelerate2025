@@ -1,6 +1,6 @@
 ⚠️ **Clarification**:
 
-Available actual imbalance prices: 
+Update of the actual imbalance prices for your predictions:
 * Historical from the 22/05/2024 to today early morning: [Elia Open Data – Actual Imbalance Price (ODS134)](https://opendata.elia.be/explore/dataset/ods134/table/)
 * Near real time (all price of today up to -15min): https://opendata.elia.be/explore/dataset/ods162/table/
 
