@@ -199,7 +199,7 @@ See the technical guidelines PDF for API details.
 
 As described in the technical guideline, you will need to send in a total of 5 predictions from 18:29 to 19:29.
 
-Your solution must produce a **CSV file with predictions** in the following format:
+Each 5 emails must be a **CSV file with the prediction** in the following format:
 
 **Columns:**
 
