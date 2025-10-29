@@ -2,6 +2,8 @@
 
 * The actual imbalance prices are published hours after their occurrence (eg. actual imbalance price of 10:30-10:45 quarter-hour is published at 18:00)
 
+* To query the day-ahead market (DAM) prices from the Entsoe platform, you need an API key. But, as it's not real-time data, you can just download it manually from the same platform.
+
 
 ⚠️ **Alert**: We have added additional documentation and datasets in the PDF (system imbalance forecast, other energy market forecasts...). However, we **strongly recommend** that you search and use your own publicly available datasets of Belgian energy prices, electrical loads, etc., to build more robust solutions.
 
