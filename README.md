@@ -4,6 +4,10 @@ Update of the actual imbalance prices for your predictions:
 * Historical from the 22/05/2024 to today early morning: [Elia Open Data – Actual Imbalance Price (ODS134)](https://opendata.elia.be/explore/dataset/ods134/table/)
 * Near real time (all price of today up to -15min): https://opendata.elia.be/explore/dataset/ods162/table/
 
+Update of the predicted Elia imbalance prices per min for your predictions:
+* Historical from the 22/05/2024 to today early morning: https://opendata.elia.be/explore/dataset/ods133/table/?sort=datetime
+* Near real time (all price of today up to -15min): https://opendata.elia.be/explore/dataset/ods161/table/?sort=datetime
+
 
 To query the day-ahead market (DAM) prices from the Entsoe platform, you need an API key. But, as it's not real-time data, you can just download it manually from the same platform.
 
