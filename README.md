@@ -197,7 +197,7 @@ See the technical guidelines PDF for API details.
 
 ### Required Output Format
 
-As described in the technical guideline, you will need to send in a total of 4 predictions from 18:29 to 19:29.
+As described in the technical guideline, you will need to send in a total of 5 predictions from 18:29 to 19:29.
 
 Your solution must produce a **CSV file with predictions** in the following format:
 
