@@ -1,3 +1,8 @@
+⚠️ **Clarification**:
+
+* The actual imbalance prices are published hours after their occurrence (eg. actual imbalance price of 10:30-10:45 quarter-hour is published at 18:00)
+
+
 ⚠️ **Alert**: We have added additional documentation and datasets in the PDF (system imbalance forecast, other energy market forecasts...). However, we **strongly recommend** that you search and use your own publicly available datasets of Belgian energy prices, electrical loads, etc., to build more robust solutions.
 
 <p align="center">
